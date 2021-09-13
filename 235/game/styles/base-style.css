@@ -1,0 +1,50 @@
+/* Base style rules for Dig-Dug page */
+
+body {
+    background-color: #f4f1de;
+    font-family: Arial, sans-serif;
+    color: #444;
+}
+
+footer {
+    background-color: #3d405b;
+    color: #999;
+}
+
+h1 {
+    border-bottom: 1px solid blue;
+    text-align: center;
+}
+
+h1, h2, h3 {
+    color: #E07A5F;
+    font-family: 'Nunito', sans-serif;
+    margin-left: 10px;
+    text-decoration: underline;
+}
+
+p {
+    margin-left: 50px;
+}
+
+blockquote {
+    background-color: lightgray;
+    padding: 1rem;
+}
+
+a:link {
+    color: #F2CC8F;
+}
+
+a:visited {
+    color: #81B29A;
+}
+
+a:active {
+    color: #E07A5F;
+}
+
+img.float {
+    float: right;
+    margin: 0 12px;
+}

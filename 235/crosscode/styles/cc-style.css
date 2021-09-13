@@ -1,0 +1,45 @@
+/* Style rules for CrossCode info page */
+
+body {
+    background-image: linear-gradient(rgb(53, 53, 163), lightblue);
+    padding: 30px;
+}
+
+h1, h2, h3 {
+    font-family: monospace;
+    color:rgb(40, 45, 116);
+    font-size: 2rem;
+}
+
+h1 {
+    font-size: 5rem;
+    text-align: center;
+    border-bottom: 1px solid rgb(40, 45, 116);
+}
+
+blockquote {
+    background-color: lightcyan;
+    padding: 0.8rem;
+}
+
+#screenshot {
+    text-align: center;
+}
+
+#screenshot img {
+    border: 3px solid rgb(83, 95, 255);
+}
+
+#title-img {
+    text-align: center;
+}
+
+#content-text {
+    border-top: 1px solid rgb(83, 95, 255);
+    border-bottom: 1px solid rgb(83, 95, 255);
+}
+
+h2+p {
+    padding-left: 2%;
+    padding-right: 30%;
+}
