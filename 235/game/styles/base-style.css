@@ -1,17 +1,27 @@
 /* Base style rules for Dig-Dug page */
 
 body {
-    background-color: #f4f1de;
+    background-color: #3d405b;
     font-family: Arial, sans-serif;
     color: #444;
 }
 
-footer {
-    background-color: #3d405b;
-    color: #999;
+main {
+    background-color: #f4f1de;
+    width: 80vw;
+}
+
+header, main, footer {
+    margin: 0 auto;
+    padding: 1rem;
+}
+
+header {
+    margin-bottom: 1rem;
 }
 
 h1 {
+    font-size: 3rem;
     border-bottom: 1px solid blue;
     text-align: center;
 }
@@ -33,7 +43,7 @@ blockquote {
 }
 
 a:link {
-    color: #F2CC8F;
+    color: #f0b14b;
 }
 
 a:visited {

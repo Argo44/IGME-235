@@ -1,0 +1,32 @@
+/* Style sheet for Tetris HTML page */
+
+h2 {
+    border-bottom: 1px solid red;
+    clear: right;
+}
+
+figure {
+    float: right;
+    width: 40%;
+}
+
+figure img {
+    width: 100%;
+    margin: 1rem 0;
+}
+
+.tet {
+    float: left;
+    width: 20%;
+    border: 1px solid black;
+    padding: 1rem;
+    margin: 0 1rem;
+} 
+
+footer {
+    clear: left;
+    position: fixed;
+    top: 0rem;
+    right: 0rem;
+    z-index: -1000;
+}
