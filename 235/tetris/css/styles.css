@@ -1,32 +1,51 @@
-/* Style sheet for Tetris HTML page */
-
-h2 {
-    border-bottom: 1px solid red;
-    clear: right;
-}
+/* Flex-based style sheet for Tetris HTML */
 
 figure {
-    float: right;
-    width: 40%;
+    max-width: 650px;
+    margin: 0 auto;
 }
 
 figure img {
     width: 100%;
-    margin: 1rem 0;
+}
+
+header, main, footer {
+    width: 90vw;
+    margin: 0 auto;
+}
+
+#tetlist {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
 }
 
 .tet {
-    float: left;
-    width: 20%;
+    flex: 0 1 500px;
     border: 1px solid black;
-    padding: 1rem;
-    margin: 0 1rem;
-} 
+    text-align: center;
+}
 
-footer {
-    clear: left;
-    position: fixed;
-    top: 0rem;
-    right: 0rem;
-    z-index: -1000;
+.tet img {
+    width: 60%;
+}
+
+.long img {
+    width: 80%;
+}
+
+.square img {
+    width: 40%;
+}
+
+.name {
+    display: block;
+    margin: 5px 0;
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+.aliases {
+    text-align: left;
+    margin: 1em;
 }
