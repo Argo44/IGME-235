@@ -1,0 +1,126 @@
+/* Style sheet for 235 home page */
+
+body {
+    background-color: #27187E;
+}
+
+header, main {
+    background-color: #F1F2F6;
+    width: 85vw;
+    margin: 0 auto;
+}
+
+main {
+    border: 25px solid #758BFD;
+}
+
+h1, h2 {
+    text-align: center;
+    font-size: 4rem;
+    font-family: Verdana, Tahoma, sans-serif;
+    color: #FF8600;
+    border-bottom: 3px solid #FF8600;
+    width: 80%;
+    margin: 20px auto;
+}
+
+h2 {
+    font-size: 3rem;
+    width: 30%;
+    border-bottom: 2px solid #FF8600;
+}
+
+p {
+    font-size: 1.5rem;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+a {
+    padding: 5px 10px;
+    text-decoration: none;
+    font-size: 1.5rem;
+}
+
+a:link {
+    background-color: #FF8600;
+    color: #F1F2F6;
+}
+
+a:visited {
+    background-color: #27187E;
+    color: #758BFD;
+}
+
+a:focus {
+    background-color: #FF8600;
+    color: #758BFD;
+}
+
+a:hover {
+    background-color: #FF8600;
+    color: #758BFD;
+}
+
+a:active {
+    background-color: #27187E;
+    color: #F1F2F6;
+}
+
+.bio {
+    background-color: #AEB8FE;
+    width: 90%;
+    height: 600px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 3fr 7fr;
+    grid-template-rows: 1fr 1fr 8fr;
+    grid-template-areas: "bio-pic  ......"
+                         "bio-pic  header"
+                         "bio-pic  content";
+}
+
+#bio-pic {
+    margin: 1rem;
+    grid-area: bio-pic;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.bio h2 {
+    grid-area: header;
+    width: 300px;
+}
+
+.bio p {
+    margin: 0 20px;
+    grid-area: content;
+    line-height: 140%;
+}
+
+#portfolio {
+    margin: 1rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.project {
+    height: 175px;
+    background-color: #AEB8FE;
+    border: 2px solid #758BFD;
+    flex: 0 1 500px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.project p {
+    text-align: center;
+    margin: 10px;
+}
+
+.project a{
+    margin: 10px;
+}
