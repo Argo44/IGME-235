@@ -35,10 +35,14 @@ p {
     font-family: Arial, Helvetica, sans-serif;
 }
 
+/* Link formatting */
 a {
     padding: 5px 10px;
     text-decoration: none;
     font-size: 1.5rem;
+    color: #F1F2F6;
+    transition-property: background-color, font-size, color;
+    transition-duration: 0.2s;
 }
 
 a:link {
@@ -52,52 +56,61 @@ a:visited {
 }
 
 a:focus {
+    font-size: 2rem;
     background-color: #FF8600;
     color: #758BFD;
 }
 
 a:hover {
+    font-size: 2rem;
     background-color: #FF8600;
     color: #758BFD;
 }
 
 a:active {
+    font-size: 2rem;
     background-color: #27187E;
     color: #F1F2F6;
 }
 
+/* Biography section */
 .bio {
     background-color: #AEB8FE;
     width: 90%;
-    height: 600px;
     margin: 0 auto;
     display: grid;
     grid-template-columns: 3fr 7fr;
-    grid-template-rows: 1fr 1fr 8fr;
-    grid-template-areas: "bio-pic  ......"
-                         "bio-pic  header"
+    grid-template-rows: 100px 1fr;
+    grid-template-areas: "bio-pic  header"
                          "bio-pic  content";
 }
 
 #bio-pic {
     margin: 1rem;
+    max-width: 100%;
     grid-area: bio-pic;
     display: flex;
-    flex-direction: column;
+    align-items: center;
     justify-content: center;
 }
 
 .bio h2 {
+    max-width: 100%;
     grid-area: header;
     width: 300px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
 }
 
 .bio p {
-    margin: 0 20px;
+    margin: 20px;
     grid-area: content;
+    max-width: 100%;
     line-height: 140%;
 }
 
+/* Project section */
 #portfolio {
     margin: 1rem;
     display: flex;
@@ -106,7 +119,7 @@ a:active {
 }
 
 .project {
-    height: 175px;
+    min-height: 175px;
     background-color: #AEB8FE;
     border: 2px solid #758BFD;
     flex: 0 1 500px;
@@ -123,4 +136,12 @@ a:active {
 
 .project a{
     margin: 10px;
+}
+
+/* Change bio box from grid to flex column at narrow screens */
+@media screen and (max-width: 1000px) {
+    .bio {
+        display: flex;
+        flex-direction: column;
+    }
 }
