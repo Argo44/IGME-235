@@ -8,7 +8,6 @@
     font-style: normal;
 
 }
-
 @font-face {
     font-family: 'dogicaregular';
     src: url('../fonts/dogica-webfont.woff2') format('woff2'),
@@ -17,7 +16,6 @@
     font-style: normal;
 
 }
-
 @font-face {
     font-family: 'dogicabold';
     src: url('../fonts/dogicabold-webfont.woff2') format('woff2'),
@@ -26,7 +24,6 @@
     font-style: normal;
 
 }
-
 @font-face {
     font-family: 'dogica_pixelregular';
     src: url('../fonts/dogicapixel-webfont.woff2') format('woff2'),
@@ -35,7 +32,6 @@
     font-style: normal;
 
 }
-
 @font-face {
     font-family: 'dogica_pixelbold';
     src: url('../fonts/dogicapixelbold-webfont.woff2') format('woff2'),
@@ -43,4 +39,289 @@
     font-weight: normal;
     font-style: normal;
 
+}
+
+/* General rules */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+}
+
+main {
+    background-color: #35363D;
+    margin: 0 auto;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: retro_computerregular;
+    color: #FFFFFF;
+    font-weight: normal;
+}
+
+p {
+    font-family: dogica_pixelregular;
+    color: #FFFFFF;
+    font-size: 0.8rem;
+    line-height: 1.2;
+}
+
+.info {
+    background-color: #686868;
+    padding: 10px;
+}
+
+/* Header rules */
+#axe-icon {
+    width: 40px;
+}
+
+header {
+    background-color: #686868;
+    width: 100%;
+    height: 3rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 10%;
+}
+
+#title {
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+#title h1 {
+    font-size: 2.3rem;
+}
+
+header h3 {
+    font-size: 1rem;
+    text-align: right;
+}
+
+/* Tree article rules */
+#tree {
+    margin: 30px auto;
+    width: 80%;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#tree img {
+    border: 5px solid white;
+    width: 525px;
+    margin-left: 10px;
+    padding: 35px;
+    background-image: linear-gradient(to bottom right, #E8FDF5, 20%, #244D3E);
+}
+
+#tree .info {
+    margin-right: 10px;
+    padding: 0 30px;
+    width: 500px;
+    min-width: 400px;
+    flex: 1 1 525px;
+    overflow: hidden;
+}
+
+#tree .info h2 {
+    font-size: 1.5rem;
+}
+
+/* Mid-page image rule */
+#valley {
+    width: 100%;
+}
+
+/* Item grid rules */
+#item-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: repeat(2, auto);
+    gap: 15px 20px;
+    width: 80%;
+    margin: 30px auto;
+    grid-template-areas: "plank-img plank-txt stick-img stick-txt"
+                         "chest-img chest-txt stair-img stair-txt";
+}
+
+#item-grid .info {
+    padding: 20px;
+}
+
+.icon {
+    border: 5px solid white;
+    padding: 5% 5% 10% 5%;
+    flex: 0 1 300px;
+    background-color: #324E44;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.icon img {
+    width: 70%;
+    margin-top: -5%;
+}
+
+.planks.icon {
+    grid-area: plank-img;
+}
+
+.planks.info {
+    grid-area: plank-txt;
+}
+
+.stick.icon {
+    grid-area: stick-img;
+}
+
+.stick.info {
+    grid-area: stick-txt;
+}
+
+.chest.icon {
+    grid-area: chest-img;
+}
+
+.chest.info {
+    grid-area: chest-txt;
+}
+
+.stairs.icon {
+    grid-area: stair-img;
+}
+
+.stairs.info {
+    grid-area: stair-txt;
+}
+
+/* Footer rules */
+footer {
+    border-top: 5px solid white;
+    background-image: url("../images/trees.jpg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 0;
+    padding: 7.86% 10%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+footer h3 {
+    font-size: 1.5rem;
+}
+
+#quip {
+    text-align: left;
+    width: 30%;
+}
+
+#copyright {
+    text-align: right;
+    width: 35%;
+}
+
+/* Breakpoints */
+@media screen and (max-width:1200px) {
+    /* Shift tree article to flex column */
+    #tree {
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    #tree img {
+        margin-left: 0;
+        width: 100%;
+        padding: 10px 20%;
+    }
+
+    #tree .info {
+        margin: 10px 0;
+        width: 100%;
+        flex: 1 1 auto;
+        overflow-y: auto;
+    }
+}
+
+@media screen and (max-width:1000px) {
+    /* Reshape grid to 2 columns/4 rows */
+    #item-grid {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: repeat(4, auto);
+        grid-template-areas: "plank-img plank-txt"
+                             "stick-img stick-txt"
+                             "chest-img chest-txt"
+                             "stair-img stair-txt";
+    }
+
+    /* Resize footer */
+    footer {
+        background-size: cover;
+        background-position: center;
+    }
+
+    #copyright {
+        width: 50%;
+    }
+}
+
+@media screen and (max-width:800px) {
+    /* Reshape footer */
+    footer {
+        flex-direction: column;
+        height: fit-content;
+    }
+
+    #quip {
+        text-align: center;
+        width: 100%;
+    }
+
+    #copyright {
+        text-align: center;
+        width: 100%;
+    }
+}
+
+@media screen and (max-width:650px) {
+    /* Reshape header */
+    header {
+        flex-direction: column;
+        height: fit-content;
+    }
+
+    header h3 {
+        text-align: center;
+        margin-top: -20px;
+    }
+
+    /* Reshape grid to 1 column */
+
+    #item-grid {
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(4, 1fr auto);
+        grid-template-areas: "plank-img"
+                             "plank-txt"
+                             "stick-img"
+                             "stick-txt"
+                             "chest-img"
+                             "chest-txt"
+                             "stair-img"
+                             "stair-txt";
+    }
+
+    #item-grid .icon h3 {
+        font-size: 1.5rem;
+    }
 }
